@@ -1,0 +1,113 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+#notes-main-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    height: 70vh;
+    border: 1px solid black;
+}
+
+#notes-list-container,
+#notes-content-container {
+    border: 1px solid red;
+}
+
+#notes-list-container {
+    width: 20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: none;
+}
+
+#notes-content-container {
+    padding: 1rem;
+    width: 80%;
+    overflow-y: auto;
+}
+
+#note-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#notes-list-items {
+    padding: 0;
+}
+
+#notes-list-items li {
+    list-style-type: none;
+    border: 1px solid red;
+    padding: 2px;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+#modal-add-note {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal-container {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+
+    padding: 20px;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-container .title-field {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.modal-container .title-field  input{
+    width: 100%;
+}
+
+.modal-container .content-field {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.modal-container .content-field textarea{
+    height: 100%;
+    margin-bottom: 20px;
+    padding: 2px;
+    font-size: 0.9rem;
+}
+
+.buttons-field {
+    width: 100%;
+    text-align: end;
+}
+
