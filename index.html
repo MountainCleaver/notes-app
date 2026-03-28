@@ -18,7 +18,7 @@
     </header>
 
     <main>
-        <button id="btn-add-note" class="px-3 py-1 ">+ Add Note</button>
+        <button id="btn-add-note" class="btn btn-primary px-3 py-1 ">+ Add Note</button>
 
         <div id="notes-main-container">
             <div id="notes-list-container">
@@ -32,6 +32,7 @@
                     </div>
                 </div>
                 <p id="note-date" class="fw-light">Some date</p>
+                <hr>
                 <p id="note-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim numquam praesentium
                     consectetur eaque quasi et, labore laudantium blanditiis tenetur neque quibusdam corrupti natus
                     incidunt iste suscipit quia sed nam fugit!</p>
@@ -52,12 +53,19 @@
                     <textarea name="input-note-content" id="input-note-content"></textarea>
                 </div>
                 <div class="buttons-field">
-                    <button id="btn-modal-cancel">Cancel</button>
-                    <button id="btn-modal-submit">Submit</button>
+                    <button id="btn-modal-cancel" class="btn btn-light">Cancel</button>
+                    <button id="btn-modal-submit" class="btn btn-primary">Submit</button>
+                    <button id="btn-modal-confirm" class="btn btn-primary">Confirm</button>
                 </div>
             </div>
         </div>
         <!-- MODAL  END-->
+
+        <!-- DELETE MODAL START -->
+         <div class="hidden" id="modal-delete-note">
+            
+         </div>
+        <!-- DELETE MODAL END -->
 
     </main>
 
