@@ -11,8 +11,16 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES => false
 ];
 
-try{
-    $pdo = new PDO("mysql:host=$db_host;dbname=$db_name;charset=UTF8", $db_user, $db_pass, $options);
-}catch(PDOException $e){
-    die("Database connection failed: ". $e->getMessage());
+try {
+    $pdo = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8mb4", $db_user, $db_pass, $options);
+} catch (PDOException $e) {
+    header('Content-Type: application/json');
+    http_response_code(500);
+    
+    echo json_encode([
+        "status" => "error",
+        "message" => "Database connection failed: " . $e->getMessage()
+    ]);
+
+    exit;
 }
