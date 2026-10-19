@@ -1,7 +1,7 @@
 <?php
 
 $db_host = 'localhost';
-$db_name = 'notes_app_db';
+$db_name = 'notes_app';
 $db_user = 'root';
 $db_pass = '';
 

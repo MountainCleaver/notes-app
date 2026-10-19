@@ -22,7 +22,7 @@ let current_note = null;
 get_notes();
 
 async function get_notes() { //gets all notes
-    const notes_url = "http://localhost/try-php/apis/notes_titles.php";
+    const notes_url = "http://localhost/notes-app/apis/notes_titles.php";
     try {
         const res = await fetch(notes_url, {
             method: "GET",
@@ -48,7 +48,7 @@ async function get_notes() { //gets all notes
 }
 
 async function get_content(id) { //get contents of a selected note
-    const content_url = `http://localhost/try-php/apis/notes_content.php?note_id=${id}`;
+    const content_url = `http://localhost/notes-app/apis/notes_content.php?note_id=${id}`;
 
     try {
         const res = await fetch(content_url, {
@@ -72,7 +72,7 @@ async function get_content(id) { //get contents of a selected note
 }
 
 async function insert_note(new_note) { //add note
-    const insert_url = "http://localhost/try-php/apis/add_note.php";
+    const insert_url = "http://localhost/notes-app/apis/add_note.php";
 
     try {
         const res = await fetch(insert_url, {
@@ -90,7 +90,7 @@ async function insert_note(new_note) { //add note
 }
 
 async function edit_note(editted_note) { //edit note
-    const edit_url = "http://localhost/try-php/apis/edit_note.php";
+    const edit_url = "http://localhost/notes-app/apis/edit_note.php";
 
     try {
         const res = await fetch(edit_url, {
@@ -114,7 +114,7 @@ async function edit_note(editted_note) { //edit note
 }
 
 async function delete_note(id) {
-    const delete_url = "http://localhost/try-php/apis/delete_note.php";
+    const delete_url = "http://localhost/notes-app/apis/delete_note.php";
 
     try {
         const res = await fetch(delete_url, {
