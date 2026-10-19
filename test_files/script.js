@@ -5,7 +5,7 @@ const table = document.getElementById("table_dogs");
 button.addEventListener('click', get);
 
 async function get() {
-    const api_url = "http://localhost/try-php/test_files/api.php";
+    const api_url = "http://localhost/notes-app/test_files/api.php";
 
     try {
 
